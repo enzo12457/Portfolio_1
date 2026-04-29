@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 2ème année — Enzo Karaly</title>
+  <meta name="description" content="Détails du Stage 2ème année">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">EK</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#parcours">Parcours</a>
+      <a href="projets.html">Projets</a>
+      <a href="veille.html">Veille</a>
+      <a href="annexes.html">Annexes</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobile-menu').style.display = document.getElementById('mobile-menu').style.display === 'block' ? 'none' : 'block'">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#competences">Compétences</a>
+    <a href="index.html#parcours">Parcours</a>
+    <a href="projets.html">Projets</a>
+    <a href="veille.html">Veille</a>
+    <a href="annexes.html">Annexes</a>
+  </div>
+</nav>
+
+<section class="project-detail">
+  <div class="container">
+    <div class="section-header">
+      <span class="number">03</span>
+      <h2 class="font-display">Stage 2ème année</h2>
+      <p>Présentation du second stage et exemples de travaux réalisés.</p>
+    </div>
+    <div class="project-content">
+      <p>Stage réalisé au sein de l'association AVIP (Aide aux victimes d'infractions pénales). C'est une association qui propose un accompagnement psychologique avec différents thérapeutes mis à disposition des victimes et ce totalement gratuitement
+        J'ai développé un forum sécurisé permettant la publication contrôlée de contenus.</p>
+
+      <h3>Contexte</h3>
+      <p>L'organisation souhaitait un espace d'échange où des publications (texte et photo) créées par l'administrateur pouvaient être commentées par des utilisateurs. La confidentialité et la modération étaient essentielles.</p>
+
+      <h3>Besoins (grille E5)</h3>
+      <ul>
+        <li>Créer un forum où seuls les administrateurs postent des sujets (texte + photo).</li>
+        <li>Permettre aux utilisateurs inscrits de commenter les publications.</li>
+        <li>Mettre en place un workflow de modération : commentaires visibles uniquement après validation par l'admin.</li>
+        <li>Assurer l'authentification des utilisateurs et la persistance via une base de données.</li>
+      </ul>
+
+      <h3>Actions réalisées</h3>
+      <ol>
+        <li>Conception de la structure du forum et modélisation simple de la base de données (posts, commentaires, utilisateurs, rôles, statuts).</li>
+        <li>Implémentation du système d'authentification et gestion des sessions utilisateurs.</li>
+        <li>Développement de la logique de publication : seuls les admins peuvent créer des posts (texte + photo).</li>
+        <li>Implémentation du système de commentaires avec statut "en attente" ; ajout d'une interface d'administration pour valider ou rejeter les commentaires.</li>
+        <li>Intégration et personnalisation via WordPress en utilisant des snippets PHP et l'éditeur Elementor pour construire les pages/front-end.</li>
+        <li>Tests fonctionnels (création de post, ajout de commentaire, validation admin) et corrections.</li>
+      </ol>
+
+      <h3>Résultats</h3>
+      <p>Un forum fonctionnel livré : les administrateurs peuvent publier des sujets (texte et images), les utilisateurs s'inscrire/se connecter et commenter, et les commentaires ne deviennent publics qu'après validation par l'admin. La solution est connectée à une base de données pour la persistance.</p>
+
+      <h3>Compétences mobilisées (grille E5)</h3>
+      <ul>
+        <li>Recueillir et formaliser les besoins métier liés à la modération et à la confidentialité.</li>
+        <li>Mettre en oeuvre l'authentification et la gestion des droits (admin vs utilisateur).</li>
+        <li>Développer des fonctionnalités backend via des snippets WordPress et orchestrer l'affichage avec Elementor.</li>
+        <li>Tester et assurer la robustesse du flux de modération.</li>
+      </ul>
+
+      <h3>Outils</h3>
+      <p>WordPress, Elementor, snippets PHP personnalisés, MySQL (base de données), navigateur pour tests, environnement local/serveur de test.</p>
+
+      <h3>Rôle & durée</h3>
+      <p>Développeur stagiaire — 1 mois. </p>
+
+      <h3>Captures d'écran</h3>
+      
+      <div class="screenshots">
+        <figure class="screenshot-card">
+          <img src="capture 1 avip.PNG" alt="Liste des commentaires - vue 1">
+          <figcaption>Page 'Canal' — affichage d'un article et commentaires</figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <img src="Capture 3 avip.PNG" alt="Liste des commentaires - vue 2">
+          <figcaption>Zone de commentaire et bouton « Laisser un commentaire »</figcaption>
+        </figure>
+
+
+
+        <figure class="screenshot-card">
+          <img src="Capture connexion avip.PNG" alt="Canal / page du forum">
+          <figcaption>Page de connexion (formulaire)</figcaption>
+        </figure>
+
+        <figure class="screenshot-card">
+          <img src="Capture inscription avip.PNG" alt="Page d'inscription">
+          <figcaption>Page d'inscription (création de compte)</figcaption>
+        </figure>
+      </div>
+
+      <h3>Notes techniques</h3>
+      <ul>
+        <li>Les posts sont créés par le rôle `admin` ; les commentaires possèdent un champ `status` (pending / approved / rejected).</li>
+        <li>Utilisation de snippets WordPress (hooks/filters) pour enregistrer les commentaires avec statut "pending" et d'un shortcode/Widget Elementor pour afficher l'interface de modération.</li>
+        <li>La base de données stocke les utilisateurs, posts, commentaires et les métadonnées nécessaires pour la modération.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 <span class="accent">Enzo Karaly</span> — Portfolio BTS SIO</p>
+  </div>
+</footer>
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-content" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Fermer">✕</button>
+    <img src="" alt="" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+// Simple lightbox for project screenshots
+document.addEventListener('DOMContentLoaded', function () {
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lbCaption.textContent = alt || '';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.screenshot-card img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+});
+</script>
+
+</body>
+</html>

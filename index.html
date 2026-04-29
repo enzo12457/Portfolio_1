@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Enzo Karaly</title>
+  <meta name="description" content="Portfolio d'Enzo Karaly, étudiant en BTS SIO SLAM.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">EK</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#parcours">Parcours</a>
+      <a href="projets.html">Projets</a>
+      <a href="veille.html">Veille</a>
+      <a href="annexes.html">Annexes</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mobile-menu').style.display = document.getElementById('mobile-menu').style.display === 'block' ? 'none' : 'block'">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#competences">Compétences</a>
+    <a href="index.html#parcours">Parcours</a>
+    <a href="projets.html">Projets</a>
+    <a href="veille.html">Veille</a>
+    <a href="annexes.html">Annexes</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="font-display">JE SUIS <span class="accent">KARALY</span><br>ENZO<span class="accent">.</span></h1>
+    <p class="subtitle">Étudiant en BTS SIO — Honoré d'Estienne d'Orves</p>
+    <div class="buttons">
+      <a href="#competences" class="btn-primary">↓ Découvrir</a>
+      <a href="https://e913e2d2-1481-4cc6-b317-d223e9677787.filesusr.com/ugd/e8fa06_d0d378141735467a81538f4a71be8f2c.pdf" target="_blank" class="btn-outline">📄 Télécharger mon CV</a>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="competences">
+  <div class="container">
+    <div class="section-header">  
+      <h2 class="font-display">Compétences & Parcours</h2>
+      <p>Mes connaissances en langages et technologies</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="icon">🌐</div><h3>HTML / CSS</h3></div>
+      <div class="skill-card"><div class="icon">⚡</div><h3>JavaScript</h3></div>
+      <div class="skill-card"><div class="icon">🗄️</div><h3>SQL</h3></div>
+      <div class="skill-card"><div class="icon">🐍</div><h3>Python</h3></div>
+      <div class="skill-card"><div class="icon">💻</div><h3>PHP</h3></div>
+      <div class="skill-card"><div class="icon">🤖</div><h3>AI</h3></div>
+      <div class="skill-card"><div class="icon">👾</div><h3>Cybersécurité</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline" id="parcours">
+  <div class="container">
+    <div class="section-header">
+      <p>Mon parcours</p>
+    </div>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <span class="period">2025 — 2026</span>
+        <h3>Stage 2ème année</h3>
+        <p class="place">AVIP Association d'aide aux victimes</p>
+        <p class="desc">Développement d'un forum sécurisé avec modération des commentaires, gestion des utilisateurs et intégration via WordPress/Elementor.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <span class="period">2024 — 2025</span>
+        <h3>Stage 1ère année</h3>
+        <p class="place">ASEPTA Entreprise spécialisée en dermo-cosmétiques</p>
+        <p class="desc">Missions de maintenance, assistance utilisateurs et déploiement d'applications.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <span class="period">2024 — 2026</span>
+        <h3>BTS SIO option SLAM</h3>
+        <p class="place">Lycée Honoré d'Estienne d'Orves</p>
+        <p class="desc">Brevet de Technicien Supérieur Services Informatiques aux Organisations</p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <span class="period">2022 — 2024</span>
+        <h3>Baccalauréat</h3>
+        <p class="place">Lycée des Eucalyptus</p>
+        <p class="desc">Obtention du baccalauréat STI2D Option SIN.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 <span class="accent">Enzo Karaly</span> — Portfolio BTS SIO</p>
+  </div>
+</footer>
+</body>
+</html>
